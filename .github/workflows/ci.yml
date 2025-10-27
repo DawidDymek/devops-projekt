@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Sprawdź obecność pliku index.html
+      run: |
+        if [ ! -f app/index.html ]; then
+          echo "Brak pliku index.html!"
+          exit 1
+        else
+          echo "Plik index.html jest obecny ✅"
+        fi
