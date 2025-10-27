@@ -10,3 +10,13 @@ W terminalu (używam VScode):
     git config --global user.email "dawiddymek@onet.pl"    
     git commit -m "Inicjalizacja projektu"
     git push -u origin master
+    mkdir app
+    cd app
+    wewnątrz folderu app dodaje plik index.html a w nim umieszczam kod
+    cd ..
+    git add . 
+    git commit -m "dodanie kodu index.html"
+    git push
+w folderze głownym tworzę plik : Dockerfile, a w nim zamieszczam kod 
+w terminalu :
+    docker build -t devops-frontend .
