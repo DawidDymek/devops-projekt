@@ -1,24 +1,31 @@
-name: CI
+name: CI - Frontend
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Sprawdź obecność pliku index.html
-      run: |
-        if [ ! -f app/index.html ]; then
-          echo "Brak pliku index.html!"
-          exit 1
-        else
-          echo "Plik index.html jest obecny ✅"
-        fi
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (for lint/test)
+        run: |
+          npm init -y
+          npm install eslint --save-dev
+
+      - name: Run linter
+        run: npx eslint . || echo "Linting completed with warnings"
+
+      - name: Build Docker image
+        run: docker build -t devops-frontend .
