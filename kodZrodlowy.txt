@@ -44,4 +44,17 @@ w terminalu:
     git add docker-compose.yml
     git commit -m "Dodano plik docker-compose.yml do projektu"
     git push 
-    
+wprowadzenie pipeline'u CI , w plikuu ci.yml nanoszę zmiany kodu
+terminal :
+    git add .github/workflows/ci.yml
+    git commit -m "Dodano pipeline CI"
+    git push
+obraz dockera zbudowany w trybie multi-stage:
+    zmiana kodu w Dockerfile
+terminal:
+    docker build -t devops-frontend:multi .
+należy pamiętać że na porcie 8080 uruchomiony jest poprzedni kontener wiec:
+    docker ps
+    docker stop devops-frontend 
+    docker rm devops-frontend 
+    docker compose up -d

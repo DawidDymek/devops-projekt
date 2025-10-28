@@ -1,11 +1,20 @@
-# Używamy oficjalnego obrazu Nginx
-FROM nginx:latest
+# --- ETAP 1: Builder ---
+FROM node:18-alpine AS builder
+WORKDIR /app
 
-# Kopiujemy plik index.html do katalogu, z którego Nginx serwuje pliki
-COPY app/index.html /usr/share/nginx/html/index.html
+# Skopiuj pliki aplikacji do katalogu roboczego
+COPY app /app
 
-# Port, na którym działa Nginx
+# (Tu można by było dodać npm install / npm run build, jeśli byłby frontend JS)
+
+# --- ETAP 2: Production image ---
+FROM nginx:alpine
+
+# Skopiuj gotowe pliki z etapu buildera do Nginx
+COPY --from=builder /app /usr/share/nginx/html
+
+# Otwórz port 80 (serwer www)
 EXPOSE 80
 
-# Domyślna komenda uruchamiająca Nginx
+# Uruchom Nginx w trybie pierwszoplanowym
 CMD ["nginx", "-g", "daemon off;"]
