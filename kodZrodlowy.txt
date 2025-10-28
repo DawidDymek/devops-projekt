@@ -17,6 +17,19 @@ W terminalu (używam VScode):
     git add . 
     git commit -m "dodanie kodu index.html"
     git push
-w folderze głownym tworzę plik : Dockerfile, a w nim zamieszczam kod 
+w folderze głownym tworzę plik : Dockerfile, a w nim zamieszczam kod . (Włączam docker)
 w terminalu :
     docker build -t devops-frontend .
+    docker run -d -p 8080:80 --name devops-frontend devops-frontend
+w przeglądarce http://localhost:8080 i widzę stronę.
+w terminalu: 
+    docker stop devops-frontend
+    docker rm devops-frontend
+    git add Dockerfile
+    git commit -m "Dodano Dockerfile"   
+    git push
+tworzenie workflows w terminalu:
+    mkdir -p .github/workflows
+następnie tworze w nim plik : .github/workflows/ci.yml
+w terminalu : 
+    git add .github/workflows/ci.yml
