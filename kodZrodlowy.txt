@@ -33,3 +33,15 @@ tworzenie workflows w terminalu:
 następnie tworze w nim plik : .github/workflows/ci.yml
 w terminalu : 
     git add .github/workflows/ci.yml
+    git commit -m "Dodano workflow CI sprawdzający index.html"
+    git push
+tworzymy nowy plik docker-compose.yml
+dodajemy kod
+w terminalu:
+    docker compose up -d
+    sprawdzenie aktywnych kontenerów: docker ps 
+    zatrzymanie aplikacji: docker compose down
+    git add docker-compose.yml
+    git commit -m "Dodano plik docker-compose.yml do projektu"
+    git push 
+    
