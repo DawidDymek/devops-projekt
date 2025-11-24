@@ -6,6 +6,20 @@ services:
       - "8080:80"
     restart: always
 
+  backend:
+    build: ./backend
+    container_name: devops-backend
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: db
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: devops
+    depends_on:
+      - db
+    restart: always
+
   db:
     image: mysql:8.0
     container_name: devops-db
