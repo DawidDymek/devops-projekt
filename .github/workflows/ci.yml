@@ -1,4 +1,4 @@
-name: CI - Frontend
+name: CI - Frontend + Backend
 
 on:
   push:
@@ -27,5 +27,8 @@ jobs:
       - name: Run linter
         run: npx eslint . || echo "Linting completed with warnings"
 
-      - name: Build Docker image
-        run: docker build -t devops-frontend .
+      - name: Build Frontend Docker image
+        run: docker build -t devops-frontend ./frontend
+
+      - name: Build Backend Docker image
+        run: docker build -t devops-backend ./backend
