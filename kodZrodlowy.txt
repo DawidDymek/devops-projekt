@@ -62,4 +62,13 @@ należy pamiętać że na porcie 8080 uruchomiony jest poprzedni kontener wiec:
 Po zmianie frontend (zmiana strony na portfolio )
     docker compose build --no-cache
     docker compose up -d
+    git status
+    git add . 
+    git commit -m "zmiana kodu index.html oraz test działania"
+    git push
+na ocenę 4.0 dodanie bazy danych, edycja kodu w docker-compose.yml
+    docker compose down
+    docker compose up -d
+    docker ps (pokazuje devops-projekt-frontend oraz mysql:8.0)
+    docker exec -it devops-db mysql -u user -p (hasło: password)
     
