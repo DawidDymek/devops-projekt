@@ -71,4 +71,6 @@ na ocenę 4.0 dodanie bazy danych, edycja kodu w docker-compose.yml
     docker compose up -d
     docker ps (pokazuje devops-projekt-frontend oraz mysql:8.0)
     docker exec -it devops-db mysql -u user -p (hasło: password)
-    
+  dodanie folderu backend  
+  dodanie pliku package oraz server
+  
