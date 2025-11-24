@@ -55,6 +55,11 @@ terminal:
     docker build -t devops-frontend:multi .
 należy pamiętać że na porcie 8080 uruchomiony jest poprzedni kontener wiec:
     docker ps
-    docker stop devops-frontend 
-    docker rm devops-frontend 
+    docker stop names 
+    docker rm names  
     docker compose up -d
+
+Po zmianie frontend (zmiana strony na portfolio )
+    docker compose build --no-cache
+    docker compose up -d
+    

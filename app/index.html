@@ -3,22 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Projekt</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            text-align: center;
-            padding-top: 100px;
-        }
-        h1 {
-            color: #0078d7;
-        }
-    </style>
+    <meta name="description" content="Portfolio artystki Kingi Nowak - twórczyni obrazów i malarstwa współczesnego. Odkryj jej galerię, nadchodzące wydarzenia i informacje kontaktowe.">
+    <meta name="keywords" content="Kinga Nowak, portfolio, artystka, malarstwo, sztuka współczesna, galeria, kontakt">
+    <meta name="author" content="Kinga Nowak">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Portfolio Kingi Nowak">
+    <meta property="og:description" content="Portfolio artystki Kingi Nowak - twórczyni obrazów i malarstwa współczesnego. Odkryj jej galerię, nadchodzące wydarzenia i informacje kontaktowe.">
+    <meta property="og:image" content="img/zdjtwarz.jpg">
+    <meta property="og:url" content="https://www.kinganowak.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Portfolio Kingi Nowak</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>DevOps działa! 🚀</h1>
-    <p>To moja pierwsza aplikacja uruchomiona w Dockerze.</p>
+    <!-- Nagłówek -->
+    <header class="bg-light shadow-sm sticky-top">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="h3 m-0">Kinga Nowak</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#" class="nav-link active" data-section="home">Spotkania</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-section="gallery">Galeria</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-section="about">O mnie</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-section="contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Główna zawartość -->
+    <main>
+        <!-- Ekran startowy -->
+<section id="home" class="visible py-5">
+    <div class="container text-center">
+        <h2>Poniżej daty wraz z godzinami spotkań ze mną. Kliknij, aby zobaczyć lokalizację na mapie!</h2>
+        <p class="mt-3">Tworzę sztukę, która inspiruje i zachwyca. To jest moja strona główna, na której znajdziesz wszystkie informacje o mojej twórczości.</p>
+        <div class="mt-5">
+            <h3>Najbliższe spotkania:</h3>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=pl&sa=X&geocode=KVta3apTzB5HMYsYtRj6vkNi&daddr=al.+Ksi%C4%99cia+J%C3%B3zefa+Poniatowskiego+1,+03-901+Warszawa" target="_blank">25 marca 2025, godz. 18:00 - Warszawa</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps?sca_esv=98573c07e313617d&sxsrf=ADLYWIJP1efhWnaxogszN8kmHz933xkKsQ:1736433721812&gs_lp=Egxnd3Mtd2l6LXNlcnAiDnN0YWRpb24gd2lzbHkgKgIIADILEC4YgAQYxwEYrwEyDRAuGIAEGMcBGAoYrwEyBRAAGIAEMgcQABiABBgKMgcQABiABBgKMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDILEC4YgAQYxwEYrwEyGhAuGIAEGMcBGK8BGJcFGNwEGN4EGOAE2AEBSNgfUABYqhhwA3gBkAEAmAGMAaAB-g6qAQQxLjE2uAEByAEA-AEBmAIUoALFD6gCFMICChAjGIAEGCcYigXCAgQQIxgnwgIKEAAYgAQYQxiKBcICChAuGIAEGEMYigXCAgsQABiABBixAxiDAcICCBAAGIAEGLEDwgIIEC4YgAQYsQPCAhAQLhiABBhDGMcBGIoFGK8BwgIQEC4YgAQY0QMYQxjHARiKBcICCxAuGIAEGLEDGIMBwgIEEAAYA8ICBxAjGCcY6gLCAhAQABgDGLQCGOoCGI8B2AEBwgIQEC4YAxi0AhjqAhiPAdgBAcICERAuGIAEGLEDGNEDGIMBGMcBwgIOEC4YgAQYsQMYgwEYigXCAhEQLhiABBixAxiDARjUAhiKBcICDRAuGIAEGLEDGEMYigXCAg4QLhiABBixAxjHARivAcICHxAuGIAEGEMYxwEYigUYrwEYlwUY3AQY3gQY4ATYAQGYAwbxBcMUIFPuSGzkugYGCAEQARgKkgcEMy4xN6AHvKkC&um=1&ie=UTF-8&fb=1&gl=pl&sa=X&geocode=KQl6r9SgWxZHMbBzuIjQGObr&daddr=W%C5%82adys%C5%82awa+Reymonta+20,+30-059+Krak%C3%B3w" target="_blank">17 kwietnia 2025, godz. 18:00 - Kraków</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgNGIAEMggIAhAAGBYYHjIICAMQABgWGB4yCAgEEAAYFhgeMggIBRAAGBYYHjIICAYQABgWGB4yCAgHEAAYFhgeMggICBAAGBYYHjIICAkQABgWGB7SAQgzNzUzajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=pl&sa=X&geocode=KZX95aqO6g9HMQ15DBaP_M7w&daddr=al.+%C5%9Al%C4%85ska+1,+54-118+Wroc%C5%82aw" target="_blank">24 kwietnia 2025, godz. 18:00 - Wrocław</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqDQgBEC4YrwEYxwEYgAQyBggAEEUYOTINCAEQLhivARjHARiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABNIBCDUzNzRqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=pl&sa=X&geocode=KYlSWo4dRQRHMTC_sobdRKl_&daddr=Bu%C5%82garska+17,+60-320+Pozna%C5%84" target="_blank">31 maj 2025, godz. 18:00 - Poznań</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps/dir/51.2780882,15.7143/stadion+lechii+gdansk/@52.7497853,14.5405614,539796m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x46fd74ac4c6f7827:0xba625e21f3e00feb!2m2!1d18.6403027!2d54.3899458?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">7 czerwiec 2025, godz. 18:00 - Gdańsk</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTINCAEQLhivARjHARiABDIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIHCAUQABjvBTIKCAYQABiABBiiBDIHCAcQABjvBdIBCDQ0NTBqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=pl&sa=X&geocode=KS-X1_tQyxtHMWNbcKwnwDGn&daddr=al.+marsz.+J%C3%B3zefa+Pi%C5%82sudskiego+138,+92-230+%C5%81%C3%B3d%C5%BA" target="_blank">14 czerwiec 2025, godz. 18:00 - Łódź</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIPCAEQLhgKGK8BGMcBGIAEMgkIAhAAGAoYgAQyCQgDEAAYChiABDIJCAQQABgKGIAEMgkIBRAAGAoYgAQyCQgGEAAYChiABDIJCAcQABgKGIAEMgkICBAAGAoYgATSAQg0NjU0ajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=pl&sa=X&geocode=KcvtWBw1CapHMfxECnWgnw4x&daddr=Mieczys%C5%82awa+Kar%C5%82owicza+28,+71-899+Szczecin" target="_blank">21 czerwiec 2025, godz. 18:00 - Szczecin</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps/dir/51.2780882,15.7143/stadion+bydgoszcz/@52.0531688,14.150388,548386m/data=!3m3!1e3!4b1!5s0x470313dee41ac285:0xabe6ff97bc4f0c4!4m9!4m8!1m1!4e1!1m5!1m1!1s0x470313b64ceb18f7:0xf46d123dfa5ea4ad!2m2!1d18.0204984!2d53.1456694?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">28 lipiec 2025, godz. 18:00 - Bydgoszcz</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=pl&sa=X&geocode=KevHye90VyJHMaYPcq-oDJAx&daddr=Stadionowa+1,+20-405+Lublin" target="_blank">7 sierpień 2025, godz. 18:00 - Lublin</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.google.com/maps?hl=pl&gl=pl&um=1&ie=UTF-8&fb=1&sa=X&geocode=KS8Ll70czhZHMSs8nTTV5eOM&daddr=Bukowa+1A,+40-108+Katowice" target="_blank">14 sierpień 2025, godz. 18:00 - Katowice</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Galeria -->
+        <section id="gallery" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Galeria</h2>
+                <div class="carousel">
+                    <button class="carousel-btn left" aria-label="Przesuń w lewo">&lt;</button>
+                    <div class="carousel-images">
+                        <figure class="gallery-item">
+                            <img src="img/zdj1.jpg" class="img-fluid rounded shadow" alt="Obraz o tytule Dawn, autorstwa Kingi Nowak">
+                            <figcaption>Dawn, oil on canvas, 120x170 cm</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="img/zdj2.jpg" class="img-fluid rounded shadow" alt="Obraz o tytule Stage, autorstwa Kingi Nowak">
+                            <figcaption>Stage, oil on canvas, 150x210 cm</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="img/zdj3.jpg" class="img-fluid rounded shadow" alt="Obraz o tytule Archeology, autorstwa Kingi Nowak">
+                            <figcaption>Archeology, oil on canvas, 105x150 cm</figcaption>
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="img/zdj4.jpg" class="img-fluid rounded shadow" alt="Obraz o tytule Goats, autorstwa Kingi Nowak">
+                            <figcaption>Goats, oil on canvas, 130x180 cm</figcaption>
+                        </figure>
+                    </div>
+                    <button class="carousel-btn right" aria-label="Przesuń w prawo">&gt;</button>
+                </div>
+            </div>
+        </section>
+           
+        <!-- O mnie -->
+        <section id="about" class="hidden py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2 class="mb-3">O mnie</h2>
+                        <p>Urodziłam się w Krakowie, dorastałam w Düsseldorfie. Ukończyłam Wydział Malarstwa ASP w Krakowie w 2001 roku, studiowałam w École Nationale Supérieure des Beaux-Arts w Paryżu, byłam wykładowczynią w University of the Arts, London College of Communication w Londynie.W 2014 roku obrazy mojego autorstwa znalazły się w publikacji „100 Painters of Tomorrow” wydawnictwa Thames & Hudson. Prace znajdują się w kolekcji Muzeum Narodowego w Krakowie, Zamku Królewskiego na Wawelu, Muzeum Fotografii w Krakowie, Muzeum Narodowego w Gdańsku, Bunkra Sztuki w Krakowie oraz w wielu kolekcjach prywatnych.Od 2023 roku prowadzę pracownię malarstwa na Wydziale Malarstwa Akademii Sztuk Pięknych w Krakowie.Od 2015 roku wraz z Michałem Bratko współtworzę przestrzeń działań artystycznych W I D N A.Moja praktyka artystyczna rozgrywa się na dwóch płaszczyznach – przedstawiającej i abstrakcyjnej. Obie drogi łączy źródło inspiracji, jakim jest wielokulturowość i poczucie przynależności do zbiorowej wyobraźni. W muzeach, od kiedy pamiętam, towarzyszyło mi wrażenie nieprzystawalności oglądanych obiektów do miejsc w których się znajdują. Obecność antycznych rzeźb, afrykańskich przedmiotów albo masek w środku europejskich stolic, powoduje we mnie niewygodny dyskomfort. Nie potrafię przechodzić koło nich obojętnie, ponieważ dotyka mnie piękno ich form. Zapożyczam je do figuratywnych obrazów, bo obiekty te wypełniały od dzieciństwa moją wyobraźnię i stały się w efekcie jej częścią, choć przecież ich fizyczna obecność powinna powrócić tam, skąd pochodzą. Abstrakcyjne obrazy i rzeźby powstają z potrzeby doświadczania koloru, potrzeby prostoty i syntezy, gry z przestrzenią i jej percepcją.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="img/zdjtwarz.jpg" class="img-fluid rounded shadow" alt="Kinga Nowak">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt -->
+        <section id="contact" class="hidden py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/zdjkontakt.jpg" class="img-fluid rounded shadow" alt="Kinga Nowak">
+                    </div>
+                    <div class="col-md-6 text-white d-flex flex-column justify-content-center">
+                        <h2 class="mb-4">Kinga Nowak</h2>
+                        <p><strong>Email:</strong> kinga.nowak@example.com</p>
+                        <p><strong>Telefon:</strong> +48 123 456 789</p>
+                        <div class="social-buttons mt-4">
+                            <a href="https://www.facebook.com" target="_blank" class="btn btn-primary">Facebook</a>
+                            <a href="https://www.instagram.com" target="_blank" class="btn btn-danger">Instagram</a>
+                            <a href="https://www.twitter.com" target="_blank" class="btn btn-info">X (Twitter)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
