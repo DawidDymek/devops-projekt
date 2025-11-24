@@ -1,0 +1,6 @@
+# Node.js modules
+node_modules/
+
+# inne typowe pliki do ignorowania
+package-lock.json
+.env

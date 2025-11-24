@@ -1,16 +1,21 @@
 services:
   frontend:
-    build: .
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     container_name: devops-frontend
     ports:
       - "8080:80"
     restart: always
 
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: devops-backend
     ports:
       - "3000:3000"
+    restart: always
     environment:
       DB_HOST: db
       DB_USER: user
@@ -18,7 +23,6 @@ services:
       DB_NAME: devops
     depends_on:
       - db
-    restart: always
 
   db:
     image: mysql:8.0
