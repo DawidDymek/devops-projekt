@@ -3,6 +3,7 @@ name: CI - Frontend + Backend
 on:
   push:
     branches: [ master ]
+
   pull_request:
     branches: [ master ]
 
@@ -11,24 +12,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      #Pobranie repozytorium
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      #Instalacja Node.js (tylko dla backendu)
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Install dependencies (for lint/test)
-        run: |
-          npm init -y
-          npm install eslint --save-dev
+      #Instalacja zależności backendu
+      - name: Install backend dependencies
+        working-directory: backend
+        run: npm install
 
-      - name: Run linter
+      #Lint backendu (test jakości kodu)
+      - name: Run backend linter
+        working-directory: backend
         run: npx eslint . || echo "Linting completed with warnings"
 
+      #Build obrazu Dockera – frontend
       - name: Build Frontend Docker image
         run: docker build -t devops-frontend ./frontend
 
+      #Build obrazu Dockera – backend
       - name: Build Backend Docker image
         run: docker build -t devops-backend ./backend
