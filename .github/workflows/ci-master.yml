@@ -1,0 +1,20 @@
+name: CI - Master (Build Docker Images)
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Frontend Docker image
+        run: docker build -t devops-frontend ./frontend
+
+      - name: Build Backend Docker image
+        run: docker build -t devops-backend ./backend
